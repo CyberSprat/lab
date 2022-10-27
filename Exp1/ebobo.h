@@ -143,7 +143,7 @@ void checkingDotInZones(circle v, float *dot, char *cmdStr){
 	}
 }
 
-void diretionChecking(float *dot1, float *dot2, char *cmdStr){
+void directionChecking(float *dot1, float *dot2, char *cmdStr){
 	system(cmdStr);
 	if((dot1[0]==dot2[0]) && (dot1[1]!=dot2[1]))
 		printf("AB is horisontal\n");
