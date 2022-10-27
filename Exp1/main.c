@@ -44,19 +44,29 @@ void menu(circle v, float *dot1, float *dot2, char *strCmd){
 	switch(i){
 		case 1:
 			checkingDotInZones(v, dot1, strCmd);
-			for(int x=0; x<1000; x++);
+			printf("\nPush any key...);
+			key=getch();
 			checkingDotInZones(v, dot2, strCmd);
+			printf("\nPush any key...);
+			key=getch();
 			break;
 		case 2:
 			directionChecking(dot1, dot2, strCmd);
+			printf("\nPush any key...);
+			key=getch();
 			break;
 		case 3:
 			dotInBorderChecking(v, dot1, strCmd);
-			for(int x=0; x<1000; x++);
+			printf("\nPush any key...);
+			key=getch();
 			dotInBorderChecking(v, dot2, strCmd);
+			printf("\nPush any key...);
+			key=getch();
 			break;
 		case 4:
 			dotCCheckingOnAB(dot1, dot2, strCmd);
+			printf("\nPush any key...);
+			key=getch();
 			break;
 	}
 }
