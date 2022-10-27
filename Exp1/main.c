@@ -36,9 +36,9 @@ void menu(circle v, float *dot1, float *dot2, char *strCmd){
 				break;
 		}
 		key=getch();
-		if(key==115 && i>=1)
+		if(key==115 && i>=1 && i<4)
 			i++;
-		else if(key==119 && i<=4)
+		else if(key==119 && i>1 && i<=4)
 			i--;
 	}while(key!=13);
 	switch(i){
