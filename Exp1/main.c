@@ -14,6 +14,7 @@ int main(){
 	coordZoneB(v7.zoneBX, v7.zoneBY);
 	coordZoneC(v7.zoneCX, v7.zoneCY);
 	coordZoneD(v7.zoneDX, v7.zoneDY);
+	menu(v7, Dot1, Dot2, "cls");
 	return 0;
 }
 
