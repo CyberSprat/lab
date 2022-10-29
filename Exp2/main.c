@@ -1,81 +1,59 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "fuflo.h"
 
-void rookVSrook_generation(int (*field)[8], int *whiteRookX, int *whiteRookY, int *blackRookX, int *blackRookY, int *goalX, int *goalY);
-int rookVSrook_action(int (*field)[8], int whiteRookX, int whiteRookY, int blackRookX, int blackRookY, int goalX, int goalY);
+void menu(int (*field)[8], char *strCmd);
 
 int main(){
-	
-
+    int chessPlank[8][8];
+    menu(chessPlank, "cls");
 	return 0;
 }
 
-
-void rookVSrook_generation(int (*field)[8], int *whiteRookX, int *whiteRookY, int *blackRookX, int *blackRookY, int *goalX, int *goalY){
-	srand(time(NULL));
-	for(int i=0; i<8; i++)
-		for(int j=0; j<8; j++)
-			field[i][j]=0;
-	*whiteRookX=rand()%8;
-	*whiteRookY=rand()%8;
-	*blackRookX=rand()%8;
-	*blackRookY=rand()%8;
-	*goalX=rand()%8;
-	*goalY=rand()%8;
-	field[*whiteRookY][*whiteRookX]=1;
-	field[*blackRookY][*blackRookX]=2;
-	field[*goalY][*goalX]=3;
-	for(int i=*blackRookX+1; i<8; i++){
-		if(field[*blackRookY][i]!=1)
-			field[*blackRookY][i]=4;
-		else
+void menu(int (*field)[8], char *strCmd){
+	int key=0, i=1, result=0;
+	int x1=0, y1=0, x2=0, y2=0, x3=0, y3=0;
+	do{
+		switch(i){
+			case 1:
+				printMenuSelected_rookVSrook(strCmd);
+				break;
+			case 2:
+				printMenuSelected_bishopVSbishop(strCmd);
+				break;
+		}
+		key=getch();
+		if(key==115 && i>=1 && i<2)
+			i++;
+		else if(key==119 && i>1 && i<=2)
+			i--;
+	}while(key!=13);
+	switch(i){
+		case 1:
+			rookVSrook_generation(field, &x1, &y1, &x2, &y2, &x3, &y3);
+			result=rookVSrook_action(field, x1, y1, x2, y2, x3, y3);
+			if(result==1){
+                system(strCmd);
+                printf("This generation is success.\n\nPress any buttom for exit...");
+                key=getch();
+			}
+			else{
+                system(strCmd);
+                printf("This generation is fail.\n\nPress any buttom for exit...");
+                key=getch();
+			}
+			break;
+		case 2:
+            bishopVSbishop_generation(field, &x1, &y1, &x2, &y2, &x3, &y3);
+            bishopVSbishop_action(field, x1, y1, x2, y2, x3, y3);
+            if(result==1){
+                system(strCmd);
+                printf("This generation is success.\n\nPress any buttom for exit...");
+                key=getch();
+			}
+			else{
+                system(strCmd);
+                printf("This generation is fail.\n\nPress any buttom for exit...");
+                key=getch();
+			}
 			break;
 	}
-	for(int i=*blackRookX-1; i>=0; i--){
-		if(field[*blackRookY][i]!=1)
-			field[*blackRookY][i]=4;
-		else
-			break;
-	}
-	for(int i=*blackRookY+1; i<8; i++){
-		if(field[i][*blackRookX]!=1)
-			field[i][*blackRookX]=4;
-		else
-			break;
-	}
-	for(int i=*blackRookY-1; i>=0; i--){
-		if(field[i][*blackRookX]!=1)
-			field[i][*blackRookX]=4;
-		else
-			break;
-	}
-}
-
-int rookVSrook_action(int (*field)[8], int whiteRookX, int whiteRookY, int blackRookX, int blackRookY, int goalX, int goalY){
-	for(int i=whiteRookX+1; i<8; i++){
-		if(field[whiteRookY][i]==4 && field[whiteRookY][i+1]!=2)
-			return 0;
-		else if(field[whiteRookY][i]==3)
-			return 1;
-	}
-	for(int i=whiteRookX-1; i>=0; i--){
-		if(field[whiteRookY][i]==4 && field[whiteRookY][i-1]!=2)
-			return 0;
-		else if(field[whiteRookY][i]==3)
-			return 1;
-	}
-	for(int i=whiteRookY+1; i<8; i++){
-		if(field[i][whiteRookX]==4 && field[i+1][whiteRookX]!=2)
-			return 0;
-		else if(field[i][whiteRookX]==3)
-			return 1;
-	}
-	for(int i=whiteRookY-1; i>=0; i--){
-		if(field[i][whiteRookX]==4 && field[i-1][whiteRookX]!=2)
-			return 0;
-		else if(field[i][whiteRookX]==3)
-			return 1;
-	}
-	return 0;
 }
