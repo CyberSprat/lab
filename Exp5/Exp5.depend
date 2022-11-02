@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1667395951 source:/home/vlad/CodeBlocks projects/Exp5/main.c
+	"exp5.h"
+	<stdlib.h>
+	<time.h>
+
+1667395538 /home/vlad/CodeBlocks projects/Exp5/exp5.h
+	<stdio.h>
+
