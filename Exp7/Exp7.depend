@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1667570141 source:/home/vlad/CodeBlocks projects/Exp7/main.cpp
+	"Exp7.h"
+
+1667570015 /home/vlad/CodeBlocks projects/Exp7/Exp7.h
+	<iostream>
+
