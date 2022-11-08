@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1667918642 source:/home/vlad/CodeBlocks projects/Exp9/main.c
+	<stdio.h>
+	<stdlib.h>
+
