@@ -26,6 +26,7 @@ int main(){
         else
             temp++;
     }
-    printf("%d\n", maxLeight);
+    free(str);
+    printf("Leight of biggest word:%d\n", maxLeight);
     return 0;
 }
