@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1668004312 source:/home/vlad/CodeBlocks projects/Exp11/main.c
+	"exp11.h"
+
+1668004359 /home/vlad/CodeBlocks projects/Exp11/exp11.h
+	<stdio.h>
+	<stdlib.h>
+
