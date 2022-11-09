@@ -14,6 +14,7 @@ int main(){
     printf("Enter the text:");
     fgets(text, 256, stdin);
     enPanChecking(text, alph);
+    free(text);
     return 0;
 }
 //abcdifghijklmnopqrstuvwxyz
