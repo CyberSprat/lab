@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1668031402 source:/home/vlad/CodeBlocks projects/Exp12/main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<time.h>
+
