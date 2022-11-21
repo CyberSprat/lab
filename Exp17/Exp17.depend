@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1669065891 source:/home/vlad/CodeBlocks projects/Exp17/main.cpp
+	"exp17.h"
+
+1669066322 /home/vlad/CodeBlocks projects/Exp17/exp17.h
+	<iostream>
+	<string>
+	<regex>
+	<ctime>
+
