@@ -22,9 +22,9 @@ void withoutRegexFunc(std::string *text, unsigned int strCount){
             for(int j=0; j<text[i].size(); j++)
                 text[i][j]='*';
     for(int i=0; i<strCount; i++)
-        for(int j=0; j<strCount; j++)
+        for(int j=0; j<text[i].size(); j++)
             if(text[i][j]=='@')
-                for(int k=0; j<text[i].size(); j++)
+                for(int k=0; k<text[i].size(); k++)
                 text[i][k]='*';
 }
 #endif // EXP17_H
