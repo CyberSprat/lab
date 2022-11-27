@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1669531351 source:/home/vlad/CodeBlocks projects/Exp22/main.c
+	"exp22.h"
+
+1669532136 /home/vlad/CodeBlocks projects/Exp22/exp22.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1669532155 source:/home/vlad/CodeBlocks projects/Exp22/main.cpp
+	"exp22.h"
+

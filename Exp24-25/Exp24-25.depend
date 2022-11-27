@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1669526112 source:/home/vlad/CodeBlocks projects/Exp24-25/main.c
+	"exp24-25.h"
+
+1669526187 /home/vlad/CodeBlocks projects/Exp24-25/exp24-25.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<unistd.h>
+	<termios.h>
+
