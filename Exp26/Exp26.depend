@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1669551259 source:/home/vlad/CodeBlocks projects/Exp26/main.cpp
+	"exp26.h"
+
+1669551248 /home/vlad/CodeBlocks projects/Exp26/exp26.h
+	<iostream>
+	<cstdlib>
+
