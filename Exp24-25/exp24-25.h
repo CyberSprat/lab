@@ -121,10 +121,10 @@ void exp25(int player, int bot){
 			printf("\nBot win!\n");
 			break;
 			case 4:
-			printf("\nPlayer win!\n");
+			printf("\nBot win!\n");
 			break;
 			case 5:
-			printf("\nBot win!\n");
+			printf("\nPlayer win!\n");
 			break;
 		}
 		break;
@@ -140,10 +140,10 @@ void exp25(int player, int bot){
 			printf("\nDraw!\n");
 			break;
 			case 4:
-			printf("\nBot win!\n");
+			printf("\nPlayer win!\n");
 			break;
 			case 5:
-			printf("\nPlayer win!");
+			printf("\nBot win!");
 			break;
 		}
 		break;
@@ -153,10 +153,10 @@ void exp25(int player, int bot){
 			printf("\nBot win!\n");
 			break;
 			case 2:
-			printf("\nBot win!\n");
+			printf("\nPlayer win!\n");
 			break;
 			case 3:
-			printf("\nPlayer win!\n");
+			printf("\nBot win!\n");
 			break;
 			case 4:
 			printf("\nDraw!\n");
@@ -172,10 +172,10 @@ void exp25(int player, int bot){
 			printf("\nPlayer win!\n");
 			break;
 			case 2:
-			printf("\nPlayer win!\n");
+			printf("\nBot win!\n");
 			break;
 			case 3:
-			printf("\nBot win!\n");
+			printf("\nPlayer win!\n");
 			break;
 			case 4:
 			printf("\nBot win!\n");
